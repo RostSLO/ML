@@ -28,7 +28,12 @@ if __name__ == '__main__':
     clf = tree.DecisionTreeClassifier(max_depth=3, random_state=42)
     clf.fit(X_train, y_train)
 
+    # Setting dpi = 300 to make image clearer than default
+    fig = plt.subplots(nrows=1, ncols=1, figsize=(4, 4), dpi=300)
+
     #tree.plot_tree(clf, feature_names=iris.feature_names, class_names=iris.target_names, rounded=True, filled=True)
+
+    #fig.savefig('plottree.png')
 
     viz = dtreeviz(clf,
                     x_data = X_train,
@@ -37,4 +42,4 @@ if __name__ == '__main__':
                     feature_names = iris.feature_names,
                     class_names = list(iris.target_names),
                     title = "Decision Tree - Iris data set")
-    viz
+    viz.view()
