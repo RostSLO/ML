@@ -42,7 +42,7 @@ linear.fit(X_train, y_train)
 acc = linear.score(X_test, y_test)
 
 #make prediction of the marks on test data
-predictG3 = linear.predict(np.sort(X_test, axis=0))
+predictG3 = linear.predict(X_test)
 
 #create list of # of samples used for prediction
 # will be used to plot the actual and predicted data by samples
@@ -50,7 +50,7 @@ axisX = [i for i in range(len(predictG3))]
 
 # Plot outputs
 #plot the actual marks
-plt.plot(axisX, np.sort(y_test, axis=0),  color='green', label="Actual data")
+plt.plot(axisX, y_test,  color='green', label="Actual data")
 #plot the predicted marks
 plt.plot(axisX, predictG3, color='blue', label="Predicted data")
 
