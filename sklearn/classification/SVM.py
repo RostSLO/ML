@@ -45,7 +45,6 @@ print(f'Cross validation mean result: {cross_val_mean:.2f}%')
 
 #review confusion map
 
-
 #set the font scale
 sns.set(font_scale=1.5)
 
